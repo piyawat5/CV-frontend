@@ -57,6 +57,10 @@ header h1.big-head {
   padding: 10rem 0;
 }
 
+header h1.new-head {
+  background-color: #fff;
+}
+
 header li {
   list-style: none;
 }
@@ -138,7 +142,12 @@ section {
 }
 
 #home p {
+  margin-bottom: 4rem;
   text-align: left;
+}
+
+#home .skills-container {
+  background-color: #e8c07d;
 }
 
 #skills {
@@ -277,6 +286,14 @@ a i:hover {
           flex-direction: row-reverse;
 }
 
+#timeline .text-timeline {
+  -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  border-radius: 0.8rem;
+  padding: 1.3rem;
+  background-color: #fff1bd;
+}
+
 #timeline i {
   text-align: center;
   font-size: 5rem;
@@ -300,10 +317,17 @@ a i:hover {
 #contact p:last-child {
   text-align: center;
   margin-top: 12rem;
+  margin-bottom: 0rem;
 }
 
 #contact i {
   margin: 1rem;
+}
+
+#contact .text-contact {
+  border-radius: 0.7rem;
+  padding: 1.3rem;
+  background-color: #fff1bd;
 }
 
 @media (max-width: 1024px) {
