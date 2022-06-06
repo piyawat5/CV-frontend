@@ -36,6 +36,19 @@ header {
   padding: 0;
   background-color: $hard-green;
   z-index: 99;
+  .top-container {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    a i {
+      margin-bottom: 6rem;
+    }
+    a {
+      margin: auto;
+      width: 10%;
+    }
+  }
   h1 {
     cursor: pointer;
     padding: 0.5rem 0;
@@ -47,7 +60,7 @@ header {
   }
 
   h1.big-head {
-    padding: 10rem 0;
+    padding: 10rem 0 2rem 0;
   }
   h1.new-head {
     background-color: #fff;
@@ -56,30 +69,7 @@ header {
   li {
     list-style: none;
   }
-  a {
-    text-decoration: none;
-    position: relative;
-  }
-  a:hover {
-    color: $easy-brown;
-  }
-  a:after {
-    content: "";
-    position: absolute;
-    width: 100%;
-    transform: scaleX(0);
-    height: 3px;
-    bottom: 0;
-    left: 0;
-    background-color: $easy-brown;
-    transform-origin: bottom right;
-    transition: transform 0.25s ease-out;
-  }
 
-  a:hover:after {
-    transform: scaleX(1);
-    transform-origin: bottom left;
-  }
   nav {
     background-color: $easy-green;
   }
@@ -90,6 +80,30 @@ header {
     justify-content: flex-end;
     gap: 4rem;
   }
+}
+nav a {
+  text-decoration: none;
+  position: relative;
+}
+nav a:hover {
+  color: $easy-brown;
+}
+nav a:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 3px;
+  bottom: 0;
+  left: 0;
+  background-color: $easy-brown;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+nav a:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
 }
 header.hide {
   top: -60px;
@@ -311,6 +325,4 @@ a i:hover {
       width: 80%;
     }
   }
-}
-@media (max-width: 375px) {
 }
