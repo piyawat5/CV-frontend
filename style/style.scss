@@ -26,6 +26,7 @@ body {
 
 //header
 header {
+  box-shadow: $shadow;
   transition: top 0.3s ease-out 0s;
   display: flex;
   flex-direction: column;
@@ -34,7 +35,18 @@ header {
   top: 0;
   right: 0;
   padding: 0;
-  background-color: $hard-green;
+
+  background: linear-gradient(35deg, $hard-green, rgb(36, 167, 134));
+  background: repeating-linear-gradient(
+    45deg,
+    rgb(46, 84, 74) 0%,
+    //สีเริ่ม
+    rgb(36, 167, 134) 65%,
+    //สีหยุด
+    rgb(36, 167, 134) 65%,
+    rgb(36, 167, 134) 100%
+  );
+
   z-index: 99;
   .top-container {
     text-align: center;
@@ -127,6 +139,26 @@ section {
 
     font-size: 5rem;
     font-weight: 900;
+  }
+  .sumary-container {
+    margin: 3rem 0 3rem 0;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+
+    gap: 3rem;
+  }
+  .sumary-container img {
+    border: 5px solid $hard-brown;
+    width: 20rem;
+  }
+  .text-sumary {
+    line-height: 2;
+    width: 50%;
+    box-shadow: $shadow;
+    border-radius: 0.8rem;
+    padding: 2rem;
+    background-color: $yellow;
   }
 
   p {
@@ -222,7 +254,6 @@ a i:hover {
     margin: 3rem 0 3rem 0;
     display: flex;
     justify-content: space-evenly;
-
     gap: 3rem;
   }
   .timeline-container:nth-of-type(2n-1) {
@@ -231,7 +262,7 @@ a i:hover {
   .text-timeline {
     box-shadow: $shadow;
     border-radius: 0.8rem;
-    padding: 1.3rem;
+    padding: 2rem;
     background-color: $basic-background;
   }
   i {
@@ -266,15 +297,8 @@ a i:hover {
     background-color: $basic-background;
   }
 }
-@media (max-width: 1024px) {
-  #timeline {
-    img {
-      margin: auto;
-      width: 60%;
-    }
-  }
-}
-@media (max-width: 866px) {
+
+@media (max-width: 1055px) {
   section {
     padding: 5rem 2rem;
   }
@@ -293,6 +317,10 @@ a i:hover {
     }
   }
   #timeline {
+    img {
+      margin: auto;
+      width: 60%;
+    }
     .timeline-container {
       display: flex;
       flex-direction: column;

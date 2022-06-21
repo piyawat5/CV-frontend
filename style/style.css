@@ -24,6 +24,8 @@ body {
 }
 
 header {
+  -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
   -webkit-transition: top 0.3s ease-out 0s;
   transition: top 0.3s ease-out 0s;
   display: -webkit-box;
@@ -38,7 +40,8 @@ header {
   top: 0;
   right: 0;
   padding: 0;
-  background-color: #446a46;
+  background: linear-gradient(35deg, #446a46, #24a786);
+  background: repeating-linear-gradient(45deg, #2e544a 0%, #24a786 65%, #24a786 65%, #24a786 100%);
   z-index: 99;
 }
 
@@ -162,6 +165,36 @@ section {
   background-position: center;
   font-size: 5rem;
   font-weight: 900;
+}
+
+#home .sumary-container {
+  margin: 3rem 0 3rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 3rem;
+}
+
+#home .sumary-container img {
+  border: 5px solid #614124;
+  width: 20rem;
+}
+
+#home .text-sumary {
+  line-height: 2;
+  width: 50%;
+  -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  border-radius: 0.8rem;
+  padding: 2rem;
+  background-color: #e8c07d;
 }
 
 #home p {
@@ -313,7 +346,7 @@ a i:hover {
   -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
           box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
   border-radius: 0.8rem;
-  padding: 1.3rem;
+  padding: 2rem;
   background-color: #fff1bd;
 }
 
@@ -353,14 +386,7 @@ a i:hover {
   background-color: #fff1bd;
 }
 
-@media (max-width: 1024px) {
-  #timeline img {
-    margin: auto;
-    width: 60%;
-  }
-}
-
-@media (max-width: 866px) {
+@media (max-width: 1055px) {
   section {
     padding: 5rem 2rem;
   }
@@ -372,6 +398,10 @@ a i:hover {
   }
   #home h2 {
     font-size: 3rem;
+  }
+  #timeline img {
+    margin: auto;
+    width: 60%;
   }
   #timeline .timeline-container {
     display: -webkit-box;
