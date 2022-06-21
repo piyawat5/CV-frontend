@@ -40,9 +40,9 @@ header {
   background: repeating-linear-gradient(
     45deg,
     rgb(46, 84, 74) 0%,
-    //สีเริ่ม
+
     rgb(36, 167, 134) 65%,
-    //สีหยุด
+
     rgb(36, 167, 134) 65%,
     rgb(36, 167, 134) 100%
   );
@@ -162,7 +162,7 @@ section {
   }
 
   p {
-    margin-bottom: 4rem;
+    margin-bottom: 1rem;
     text-align: left;
   }
   .skills-container {
@@ -312,6 +312,27 @@ a i:hover {
   }
   //home
   #home {
+    .sumary-container {
+      margin: 3rem 0 3rem 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 3rem;
+    }
+    .sumary-container img {
+      border: 5px solid $hard-brown;
+      width: 20rem;
+    }
+    .text-sumary {
+      line-height: 2;
+      width: 90%;
+      box-shadow: $shadow;
+      border-radius: 0.8rem;
+      padding: 1rem;
+      background-color: $yellow;
+    }
+
     h2 {
       font-size: 3rem;
     }
