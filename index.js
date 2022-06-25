@@ -21,14 +21,14 @@ let footer = document.querySelector("footer");
 let icon = document.querySelector("a i");
 function pdfDownload() {
   if (headOne.innerHTML === "You can download PDF RESUME :") {
-    headOne.innerHTML = "RESUME";
+    headOne.innerHTML = "JAME PIYAWAT";
   } else {
     headOne.innerHTML = "You can download PDF RESUME :";
   }
 }
 function pdfDownload2() {
-  if (headOne.innerHTML !== "RESUME") {
-    headOne.innerHTML = "RESUME";
+  if (headOne.innerHTML !== "JAME PIYAWAT") {
+    headOne.innerHTML = "JAME PIYAWAT";
   }
 }
 function iconHide() {
@@ -60,3 +60,17 @@ footer.addEventListener("click", () => {
   headOne.classList.remove("big-head");
   iconHide2();
 });
+//skill
+const items = document.querySelectorAll(".item");
+const headItems = document.querySelectorAll(".item h4");
+items.forEach((item) => {
+  item.addEventListener("click", () => {
+    removeAll();
+    item.classList.add("active");
+  });
+});
+function removeAll() {
+  items.forEach((item) => {
+    item.classList.remove("active");
+  });
+}
