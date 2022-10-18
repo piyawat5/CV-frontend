@@ -329,16 +329,16 @@ section {
 
 #home h2 > :first-child {
   opacity: 0;
-  -webkit-animation: sub1 2s 5s 1;
-          animation: sub1 2s 5s 1;
+  -webkit-animation: sub1 2s 4s 1;
+          animation: sub1 2s 4s 1;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }
 
 #home h2 > :last-child {
   opacity: 0;
-  -webkit-animation: sub2 2s 7s 1;
-          animation: sub2 2s 7s 1;
+  -webkit-animation: sub2 2s 6s 1;
+          animation: sub2 2s 6s 1;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
   color: #fca61f;
@@ -887,8 +887,6 @@ footer img {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    margin: auto;
-    width: 70vw;
   }
   #skills .item {
     background-size: 300px 300%;
